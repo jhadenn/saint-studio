@@ -101,6 +101,48 @@ function setupCarousel(rootElement) {
 
 document.querySelectorAll("[data-carousel]").forEach(setupCarousel);
 
+const featureScroll = document.querySelector(".barber-feature-scroll");
+if (featureScroll) {
+  let target = featureScroll.scrollLeft;
+  let rafId = null;
+  const ease = 0.18;
+  const speed = 1.1;
+
+  const animate = () => {
+    const max = featureScroll.scrollWidth - featureScroll.clientWidth;
+    target = Math.max(0, Math.min(max, target));
+    const current = featureScroll.scrollLeft;
+    const diff = target - current;
+    if (Math.abs(diff) < 0.5) {
+      featureScroll.scrollLeft = target;
+      rafId = null;
+      return;
+    }
+    featureScroll.scrollLeft = current + diff * ease;
+    rafId = requestAnimationFrame(animate);
+  };
+
+  featureScroll.addEventListener(
+    "wheel",
+    (event) => {
+      if (Math.abs(event.deltaY) <= Math.abs(event.deltaX)) return;
+      const max = featureScroll.scrollWidth - featureScroll.clientWidth;
+      if (max <= 0) return;
+      const atStart = target <= 0 && event.deltaY < 0;
+      const atEnd = target >= max && event.deltaY > 0;
+      if (atStart || atEnd) return;
+      event.preventDefault();
+      target = Math.max(0, Math.min(max, target + event.deltaY * speed));
+      if (rafId === null) rafId = requestAnimationFrame(animate);
+    },
+    { passive: false }
+  );
+
+  featureScroll.addEventListener("scroll", () => {
+    if (rafId === null) target = featureScroll.scrollLeft;
+  });
+}
+
 document.querySelectorAll("[data-demo-form]").forEach((form) => {
   form.addEventListener("submit", (event) => {
     event.preventDefault();
