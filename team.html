@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="color-scheme" content="light dark" />
+    <title>Our Team — SAINTstudio</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main-content">Skip to content</a>
+    <header class="site-header">
+      <div class="header-inner">
+        <button class="menu-toggle" type="button" aria-label="Open menu" aria-expanded="false" data-menu-toggle>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+            <path d="M4 7h16M4 12h16M4 17h16" />
+          </svg>
+        </button>
+        <nav class="primary-nav" aria-label="Primary">
+          <a href="index.html">Home</a>
+          <a href="barbershop.html">Barbershop</a>
+          <a href="creative-agency.html">Creative Agency</a>
+          <a href="team.html" aria-current="page">Our Team</a>
+          <a href="contact.html">Contact Us</a>
+        </nav>
+        <a class="brand-wrap" href="index.html" aria-label="SAINTstudio home">
+          <span class="brand"><strong>SAINT</strong><span>studio</span></span>
+        </a>
+        <div class="header-actions">
+          <a class="icon-link" href="https://www.instagram.com/" aria-label="Instagram">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+              <rect x="3" y="3" width="18" height="18" rx="5" />
+              <circle cx="12" cy="12" r="4.2" />
+              <circle cx="17.4" cy="6.8" r="1" fill="currentColor" stroke="none" />
+            </svg>
+          </a>
+          <a class="icon-link" href="mailto:hello@saintstudio.ca" aria-label="Email">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+              <path d="M4 6h16v12H4z" />
+              <path d="m4 7 8 6 8-6" />
+            </svg>
+          </a>
+          <a class="icon-link" href="#" aria-label="Cart">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+              <path d="M3 5h2l2.2 10.4a2 2 0 0 0 2 1.6h7.7a2 2 0 0 0 2-1.5L20 8H7" />
+              <circle cx="10" cy="20" r="1.3" />
+              <circle cx="17" cy="20" r="1.3" />
+            </svg>
+          </a>
+          <button class="icon-button theme-toggle" type="button" data-theme-toggle aria-label="Switch to dark mode">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+              <path d="M21 12.7A8.8 8.8 0 1 1 11.3 3 7 7 0 0 0 21 12.7Z" />
+            </svg>
+            <span>Dark</span>
+          </button>
+        </div>
+      </div>
+      <div class="mobile-panel" data-mobile-panel>
+        <nav class="mobile-nav" aria-label="Mobile">
+          <a href="index.html">Home</a>
+          <a href="barbershop.html">Barbershop</a>
+          <a href="creative-agency.html">Creative Agency</a>
+          <a href="team.html" aria-current="page">Our Team</a>
+          <a href="contact.html">Contact Us</a>
+        </nav>
+      </div>
+    </header>
+
+    <main id="main-content">
+      <section class="section">
+        <div class="container">
+          <div class="team-intro reveal">
+            <div>
+              <p class="eyebrow">Our Team</p>
+              <h1 class="page-title">The Team Behind SAINT Studio</h1>
+            </div>
+            <p class="lede">
+              Each barber brings a distinct eye, steady precision, and intention to the chair — different signatures, one shared standard.
+            </p>
+          </div>
+
+          <div class="filter-row reveal" role="toolbar" aria-label="Filter team by speciality">
+            <button class="filter-button is-active" type="button" data-filter="all">All</button>
+            <button class="filter-button" type="button" data-filter="fades">Fades</button>
+            <button class="filter-button" type="button" data-filter="scissor work">Scissor Work</button>
+            <button class="filter-button" type="button" data-filter="beards">Beards</button>
+            <button class="filter-button" type="button" data-filter="creative direction">Creative Direction</button>
+          </div>
+
+          <div class="team-grid">
+            <button
+              class="team-card reveal"
+              type="button"
+              data-team-card
+              data-image="assets/images/team-joshua.webp"
+              data-alt="Portrait of Joshua Lat"
+              data-name="Joshua Lat"
+              data-role="Senior Barber"
+              data-tags="Fades, Scissor Work, Beards"
+              data-bio="Joshua specializes in clean fades, textured crops, and calm, exacting service that keeps the whole experience consistent."
+            >
+              <img src="assets/images/team-joshua.webp" alt="Portrait of Joshua Lat" loading="lazy" />
+              <h3>Joshua Lat</h3>
+              <p>Fades · Scissor Work</p>
+            </button>
+            <button
+              class="team-card reveal"
+              type="button"
+              data-team-card
+              data-image="assets/images/team-miguel.webp"
+              data-alt="Portrait of Miguel Lat"
+              data-name="Miguel Lat"
+              data-role="Barber"
+              data-tags="Fades, Beards"
+              data-bio="Miguel is known for crisp transitions, disciplined beard work, and cuts that hold their shape long after the appointment."
+            >
+              <img src="assets/images/team-miguel.webp" alt="Portrait of Miguel Lat" loading="lazy" />
+              <h3>Miguel Lat</h3>
+              <p>Fades · Beards</p>
+            </button>
+            <button
+              class="team-card reveal"
+              type="button"
+              data-team-card
+              data-image="assets/images/team-luis.webp"
+              data-alt="Portrait of Luis Nunag"
+              data-name="Luis Nunag"
+              data-role="Barber"
+              data-tags="Scissor Work, Fades"
+              data-bio="Luis brings a measured eye to shape, balance, and soft texture — especially for clients who want polish without stiffness."
+            >
+              <img src="assets/images/team-luis.webp" alt="Portrait of Luis Nunag" loading="lazy" />
+              <h3>Luis Nunag</h3>
+              <p>Scissor Work · Fades</p>
+            </button>
+            <button
+              class="team-card reveal"
+              type="button"
+              data-team-card
+              data-image="assets/images/team-ash.webp"
+              data-alt="Portrait of Ash Nadeem"
+              data-name="Ash Nadeem"
+              data-role="Barber"
+              data-tags="Beards, Fades"
+              data-bio="Ash focuses on proportion, beard architecture, and giving every client a finish that feels deliberate from every angle."
+            >
+              <img src="assets/images/team-ash.webp" alt="Portrait of Ash Nadeem" loading="lazy" />
+              <h3>Ash Nadeem</h3>
+              <p>Beards · Fades</p>
+            </button>
+            <button
+              class="team-card reveal"
+              type="button"
+              data-team-card
+              data-image="assets/images/team-jp.webp"
+              data-alt="Portrait of JP Dela Cruz"
+              data-name="JP Dela Cruz"
+              data-role="Barber"
+              data-tags="Creative Direction, Scissor Work"
+              data-bio="JP bridges barbering and image-making, with a strong feel for silhouette, editorial detail, and visual cohesion."
+            >
+              <img src="assets/images/team-jp.webp" alt="Portrait of JP Dela Cruz" loading="lazy" />
+              <h3>JP Dela Cruz</h3>
+              <p>Creative Direction</p>
+            </button>
+            <button
+              class="team-card reveal"
+              type="button"
+              data-team-card
+              data-image="assets/images/team-justin.webp"
+              data-alt="Portrait of Justin Estrella"
+              data-name="Justin Estrella"
+              data-role="Barber"
+              data-tags="Fades, Scissor Work"
+              data-bio="Justin works with quiet precision and a strong instinct for wearable cuts that still carry personality."
+            >
+              <img src="assets/images/team-justin.webp" alt="Portrait of Justin Estrella" loading="lazy" />
+              <h3>Justin Estrella</h3>
+              <p>Fades · Scissor Work</p>
+            </button>
+            <button
+              class="team-card reveal"
+              type="button"
+              data-team-card
+              data-image="assets/images/team-gabriel.webp"
+              data-alt="Portrait of Gabriel Lat"
+              data-name="Gabriel Lat"
+              data-role="Barber"
+              data-tags="Beards, Creative Direction"
+              data-bio="Gabriel brings a strong editorial eye to grooming, pairing beard work with a polished sense of overall presentation."
+            >
+              <img src="assets/images/team-gabriel.webp" alt="Portrait of Gabriel Lat" loading="lazy" />
+              <h3>Gabriel Lat</h3>
+              <p>Beards · Creative Direction</p>
+            </button>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <dialog data-team-dialog>
+      <div class="modal-card">
+        <img data-team-image src="" alt="" />
+        <div class="modal-copy">
+          <button class="modal-close" type="button" aria-label="Close team member details" data-close-dialog>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+              <path d="M6 6l12 12M18 6 6 18" />
+            </svg>
+          </button>
+          <div>
+            <p class="eyebrow" data-team-role></p>
+            <h2 data-team-name></h2>
+          </div>
+          <p data-team-bio></p>
+          <div class="tag-list" data-team-tags></div>
+          <a class="solid-button" href="barbershop.html#booking">Book With This Barber</a>
+        </div>
+      </div>
+    </dialog>
+
+    <footer class="site-footer">
+      <div class="footer-inner">
+        <div class="footer-brand"><strong>SAINT</strong>studio</div>
+        <div class="footer-copy">1154 Morningside Ave · Toronto, Ontario</div>
+        <div class="footer-socials">
+          <a class="icon-link" href="https://www.instagram.com/" aria-label="Instagram">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+              <rect x="3" y="3" width="18" height="18" rx="5" />
+              <circle cx="12" cy="12" r="4.2" />
+              <circle cx="17.4" cy="6.8" r="1" fill="currentColor" stroke="none" />
+            </svg>
+          </a>
+          <a class="icon-link" href="mailto:hello@saintstudio.ca" aria-label="Email">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+              <path d="M4 6h16v12H4z" />
+              <path d="m4 7 8 6 8-6" />
+            </svg>
+          </a>
+        </div>
+      </div>
+    </footer>
+    <script src="script.js"></script>
+  </body>
+</html>
