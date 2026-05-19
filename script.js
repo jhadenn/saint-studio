@@ -173,3 +173,173 @@ if (teamDialog) {
 
   teamDialog.querySelector("[data-close-dialog]").addEventListener("click", () => teamDialog.close());
 }
+
+const visitSection = document.querySelector(".visit-section");
+
+if (visitSection) {
+  const visitHours = [
+    { day: "Sun", open: null, close: null },
+    { day: "Mon", open: null, close: null },
+    { day: "Tue", open: "10:30", close: "18:00" },
+    { day: "Wed", open: "10:30", close: "18:00" },
+    { day: "Thu", open: "10:30", close: "18:00" },
+    { day: "Fri", open: "10:30", close: "18:00" },
+    { day: "Sat", open: "10:30", close: "18:00" },
+  ];
+
+  const parseHour = (value) => {
+    if (!value) return null;
+    const [hour, minute] = value.split(":").map(Number);
+    return hour * 60 + minute;
+  };
+
+  const formatHour = (minutes) => {
+    if (minutes === null) return "Closed";
+    const hour = Math.floor(minutes / 60);
+    const minute = minutes % 60;
+    const period = hour >= 12 ? "PM" : "AM";
+    const hour12 = ((hour + 11) % 12) + 1;
+    return minute === 0 ? `${hour12}${period.toLowerCase()}` : `${hour12}:${String(minute).padStart(2, "0")} ${period}`;
+  };
+
+  const entries = [...visitSection.querySelectorAll("[data-visit-entry]")];
+  const panels = [...visitSection.querySelectorAll("[data-visit-panel]")];
+  const currentEntry = visitSection.querySelector("[data-current-visit-entry]");
+
+  function selectVisitEntry(entry) {
+    const id = entry.dataset.visitEntry;
+
+    entries.forEach((item) => {
+      const isActive = item === entry;
+      item.classList.toggle("is-active", isActive);
+      item.setAttribute("aria-selected", String(isActive));
+      item.tabIndex = isActive ? 0 : -1;
+    });
+
+    panels.forEach((panel) => {
+      const isActive = panel.dataset.visitPanel === id;
+      panel.classList.toggle("is-active", isActive);
+      panel.hidden = !isActive;
+    });
+
+    if (currentEntry) currentEntry.textContent = id;
+  }
+
+  entries.forEach((entry, index) => {
+    entry.tabIndex = entry.classList.contains("is-active") ? 0 : -1;
+
+    entry.addEventListener("click", () => selectVisitEntry(entry));
+
+    entry.addEventListener("keydown", (event) => {
+      if (!["ArrowDown", "ArrowRight", "ArrowUp", "ArrowLeft", "Home", "End"].includes(event.key)) return;
+      event.preventDefault();
+
+      let nextIndex = index;
+      if (event.key === "ArrowDown" || event.key === "ArrowRight") nextIndex = (index + 1) % entries.length;
+      if (event.key === "ArrowUp" || event.key === "ArrowLeft") nextIndex = (index - 1 + entries.length) % entries.length;
+      if (event.key === "Home") nextIndex = 0;
+      if (event.key === "End") nextIndex = entries.length - 1;
+
+      entries[nextIndex].focus();
+      selectVisitEntry(entries[nextIndex]);
+    });
+  });
+
+  const hoursGrid = visitSection.querySelector("[data-visit-hours-grid]");
+
+  if (hoursGrid) {
+    const today = new Date().getDay();
+
+    visitHours.forEach((item, index) => {
+      const cell = document.createElement("div");
+      cell.className = "visit-hours__cell";
+      if (index === today) cell.classList.add("is-today");
+      if (!item.open) cell.classList.add("is-closed");
+
+      const day = document.createElement("div");
+      day.className = "visit-hours__day";
+      day.textContent = item.day;
+
+      const time = document.createElement("div");
+      time.className = "visit-hours__time";
+
+      if (item.open && item.close) {
+        time.innerHTML = `${formatHour(parseHour(item.open))}<br>${formatHour(parseHour(item.close))}`;
+      } else {
+        time.textContent = "Closed";
+        const stamp = document.createElement("div");
+        stamp.className = "visit-hours__closed";
+        stamp.textContent = "Closed";
+        cell.append(day, time, stamp);
+        hoursGrid.append(cell);
+        return;
+      }
+
+      cell.append(day, time);
+      hoursGrid.append(cell);
+    });
+  }
+
+  const dotGroup = visitSection.querySelector("[data-visit-dotgrid]");
+
+  if (dotGroup) {
+    const svgNamespace = "http://www.w3.org/2000/svg";
+    const width = 680;
+    const height = 400;
+    const columns = 28;
+    const rows = 20;
+    const pinX = width * 0.56;
+    const pinY = height * 0.52;
+
+    for (let row = 0; row < rows; row += 1) {
+      for (let column = 0; column < columns; column += 1) {
+        const x = column * (width / columns) + width / columns / 2;
+        const y = row * (height / rows) + height / rows / 2;
+        const distance = Math.hypot(x - pinX, y - pinY);
+        const radius = Math.max(0.6, 1.6 - distance / 300);
+        const opacity = Math.max(0.12, 1 - distance / 280);
+        const dot = document.createElementNS(svgNamespace, "circle");
+
+        dot.setAttribute("cx", x.toFixed(2));
+        dot.setAttribute("cy", y.toFixed(2));
+        dot.setAttribute("r", radius.toFixed(2));
+        dot.setAttribute("fill", "currentColor");
+        dot.setAttribute("opacity", (opacity * 0.22).toFixed(2));
+        dotGroup.append(dot);
+      }
+    }
+  }
+
+  visitSection.querySelectorAll("[data-copy]").forEach((button) => {
+    button.addEventListener("click", async () => {
+      const text = button.dataset.copy;
+      const label = button.querySelector("span");
+      const original = label ? label.textContent : "";
+
+      try {
+        if (navigator.clipboard) {
+          await navigator.clipboard.writeText(text);
+        } else {
+          const field = document.createElement("textarea");
+          field.value = text;
+          field.setAttribute("readonly", "");
+          field.style.position = "fixed";
+          field.style.opacity = "0";
+          document.body.append(field);
+          field.select();
+          document.execCommand("copy");
+          field.remove();
+        }
+
+        if (label) {
+          label.textContent = "Copied";
+          window.setTimeout(() => {
+            label.textContent = original;
+          }, 1600);
+        }
+      } catch {
+        if (label) label.textContent = original;
+      }
+    });
+  });
+}

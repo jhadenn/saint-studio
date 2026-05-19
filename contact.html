@@ -11,8 +11,9 @@
     <link rel="manifest" href="site.webmanifest" />
     <title>Contact Us — SAINTstudio</title>
     <link rel="stylesheet" href="styles.css" />
+    <script type="module" src="vendor/model-viewer.min.js"></script>
   </head>
-  <body>
+  <body class="contact-page">
     <a class="skip-link" href="#main-content">Skip to content</a>
     <header class="site-header">
       <div class="header-inner">
@@ -59,7 +60,7 @@
     </header>
 
     <main id="main-content">
-      <section class="section">
+      <section class="section contact-hero">
         <div class="container contact-grid">
           <div class="contact-card reveal">
             <p class="eyebrow">Contact Us</p>
@@ -78,6 +79,21 @@
                 <strong>@saintstudio.to</strong>
               </div>
             </div>
+            <model-viewer
+              class="contact-card-logo"
+              src="3d-models/logo.glb"
+              alt=""
+              auto-rotate
+              auto-rotate-delay="0"
+              rotation-per-second="7deg"
+              camera-orbit="90deg 70deg 94%"
+              exposure="0.92"
+              shadow-intensity="0"
+              interaction-prompt="none"
+              loading="eager"
+              aria-hidden="true"
+              tabindex="-1"
+            ></model-viewer>
           </div>
           <form class="form-card reveal" data-demo-form data-success="Thanks — your message is ready for the studio.">
             <div class="form-grid">
@@ -111,15 +127,6 @@
         </div>
       </section>
 
-      <section class="section">
-        <div class="container map-frame reveal">
-          <iframe
-            title="Map showing 1154 Morningside Ave, Toronto, Ontario"
-            loading="lazy"
-            src="https://www.google.com/maps?q=1154%20Morningside%20Ave%2C%20Toronto%2C%20Ontario&output=embed"
-          ></iframe>
-        </div>
-      </section>
     </main>
 
     <footer class="site-footer">
@@ -134,7 +141,7 @@
               <circle cx="17.4" cy="6.8" r="1" fill="currentColor" stroke="none" />
             </svg>
           </a>
-          <a class="icon-link" href="mailto:hello@saintstudio.ca" aria-label="Email">
+          <a class="icon-link" href="mailto:saintstudiotoronto@gmail.com" aria-label="Email">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
               <path d="M4 6h16v12H4z" />
               <path d="m4 7 8 6 8-6" />
