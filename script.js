@@ -20,8 +20,8 @@ const barberProfiles = [
     role: "Co-owner / Master Barber",
     portrait: "assets/images/Joshua-Lat.webp",
     instagram: "https://www.instagram.com/",
-    description: "Clean structure, steady detail, and a finish that feels considered from every angle.",
-    aboutHeading: "Fades, scissors, and everything in between.",
+    description: "The other half of SAINT Studio, co-owning the brand alongside his brother. With 8+ years behind the chair, he's a master of both fades and scissor work -- the kind of barber you can always count on to leave you feeling fresh.",
+    aboutHeading: "Co-owner of SAINT Studio, master barber, and 8+ years deep in the craft.",
     about: [
       "Fades, scissors, and everything in between. Joshua's work is built on experience and precision, delivering clean, tailored cuts shaped by nearly a decade behind the chair.",
       "Expect a sharp finish, steady hands, and a chair you can trust every time. Book Joshua when you want to walk out feeling fresh, every visit.",
@@ -40,11 +40,11 @@ const barberProfiles = [
     role: "Barber",
     portrait: "assets/images/Miguel-Lat.webp",
     instagram: "https://www.instagram.com/",
-    description: "Crisp transitions, disciplined beard work, and cuts designed to grow out clean.",
-    aboutHeading: "Crisp transitions shaped to last beyond the appointment.",
+    description: "One of the two owners of SAINT Studio, building the brand alongside his brother. A young creative with skill to match his vision, he's mastered both the craft of cutting hair and the art of creating content -- bringing a rare blend of precision and creativity to everything he touches.",
+    aboutHeading: "Co-owner of SAINT Studio, barber, and creative -- building the brand from the chair up alongside his brother.",
     about: [
-      "Miguel is known for sharp fades, patient detailing, and practical shapes that hold their line after the appointment.",
-      "His chair is a strong fit for clients who want consistency, clean edges, and a finish that feels polished without being overworked.",
+      "Skill meets vision. Miguel's cuts are sharp, intentional, and detail-driven, shaped by the same creative eye he brings to his work behind the camera.",
+      "Expect a clean chair, a sharp finish, and the perspective of a barber who sees every cut as part of something bigger. Book Miguel when you want craft and creativity in the same seat.",
     ],
     gallery: [
       { type: "video", src: "assets/images/migi-cut.mp4", alt: "Haircut in progress with clippers", caption: "Low taper, clean blend" },
@@ -60,11 +60,11 @@ const barberProfiles = [
     role: "Barber",
     portrait: "assets/images/Luis-Nunag.webp",
     instagram: "https://www.instagram.com/",
-    description: "Measured shape, balanced texture, and a softer approach to polished everyday hair.",
-    aboutHeading: "Measured shape, movement, and soft texture.",
+    description: "A true veteran of the craft and the core of SAINT Studio. Always locked in, always consistent -- Luis is a master at fades, scissors, and the kind of conversations that make the chair feel like home.",
+    aboutHeading: "Veteran barber, steady presence, and the core of SAINT Studio.",
     about: [
-      "Luis brings a careful eye to proportion, movement, and scissor work, especially for clients who want a cut with shape but no stiffness.",
-      "His work is steady, thoughtful, and focused on building a silhouette that matches the person wearing it.",
+      "Years of experience, sharpened every day. Luis is a master of fades and scissor work, delivering cuts built on consistency, precision, and a deep understanding of the craft.",
+      "Expect a locked-in chair, clean work every visit, and conversations that make the time fly. Book Luis when you want a barber who's seen it all and still brings his best to every cut.",
     ],
     gallery: [
       { type: "video", src: "assets/images/nunag-cut.mp4", alt: "Finished haircut shown in profile", caption: "Scissor shape, natural flow" },
@@ -80,11 +80,11 @@ const barberProfiles = [
     role: "Barber",
     portrait: "assets/images/Ash-Nadeem.webp",
     instagram: "https://www.instagram.com/",
-    description: "Strong proportions, beard architecture, and finishes that read clean in person and on camera.",
-    aboutHeading: "Strong proportions from every angle.",
+    description: "A curated look at Ash's craft -- sharp scissor work, seamless fades, and the small details that set every cut apart.",
+    aboutHeading: "Precision barber, scissor specialist, and one of the sharpest hands at SAINT Studio.",
     about: [
-      "Ash focuses on balance from every angle, pairing careful fade work with beard shaping that frames the face without feeling forced.",
-      "Book Ash for a composed, deliberate cut with sharp detail and a calm chair experience.",
+      "Trained on detail. Ash blends classic scissor work with clean, seamless fades -- every cut tailored, every line intentional.",
+      "Expect a calm chair, honest input, and a finish that holds its shape long after you leave. Book Ash when the details matter.",
     ],
     gallery: [
       { type: "image", src: "assets/images/gallery-fade.webp", alt: "Detailed fade haircut", caption: "Sharp fade, beard balance" },
@@ -100,11 +100,11 @@ const barberProfiles = [
     role: "Barber",
     portrait: "assets/images/JP-Dela.webp",
     instagram: "https://www.instagram.com/",
-    description: "Editorial detail, wearable shape, and a visual eye that connects barbering with image-making.",
-    aboutHeading: "Editorial detail made wearable.",
+    description: "A creative barber with over 10 years behind the chair. Known for his eye for style and his easygoing energy, JP brings both craft and character to every cut -- making the experience as memorable as the finish.",
+    aboutHeading: "Creative barber, 10+ years in the game, and one of the most welcoming chairs at SAINT Studio.",
     about: [
-      "JP bridges barbering and creative direction, thinking about silhouette, texture, and how a cut lands in the full look.",
-      "His work suits clients who want a cut that feels intentional, styled, and quietly distinctive.",
+      "A decade of experience sharpens instinct. JP blends creativity with technique, shaping every cut around the person in the chair -- no two the same, all built to fit.",
+      "Expect good conversation, great energy, and a finish that feels made for you. Book JP when you want a cut with personality behind it.",
     ],
     gallery: [
       { type: "image", src: "assets/images/gallery-cut.webp", alt: "Finished barbershop cut", caption: "Editorial shape, clean finish" },
@@ -120,11 +120,11 @@ const barberProfiles = [
     role: "Barber",
     portrait: "assets/images/Justin-Estrella.webp",
     instagram: "https://www.instagram.com/",
-    description: "Quiet precision, clean shape, and wearable cuts with enough detail to carry personality.",
-    aboutHeading: "Quiet precision for everyday shape.",
+    description: "A young, ambitious barber with serious talent and speed to match. Quick hands, sharp eye, and a drive to keep leveling up -- every cut reflects the hunger behind it.",
+    aboutHeading: "Young, talented, and one of the fastest-rising barbers at SAINT Studio.",
     about: [
-      "Justin works with a focused, practical eye, building cuts that are easy to wear and still feel considered.",
-      "Expect clean transitions, balanced texture, and a finish that keeps the client's day-to-day routine in mind.",
+      "Speed meets precision. Justin moves quick without cutting corners, delivering sharp, clean work shaped by ambition and a constant push to get better.",
+      "Expect an efficient chair, a fresh finish, and the energy of a barber who's just getting started. Book Justin when you want quality without the wait.",
     ],
     gallery: [
       { type: "image", src: "assets/images/gallery-fade.webp", alt: "Clean fade haircut detail", caption: "Wearable fade, soft top" },
@@ -140,11 +140,11 @@ const barberProfiles = [
     role: "Barber",
     portrait: "assets/images/Gabriel-Lat.webp",
     instagram: "https://www.instagram.com/",
-    description: "Polished grooming, sharp beard work, and a strong sense of overall presentation.",
-    aboutHeading: "Polished grooming with a complete finish.",
+    description: "\"The Process\" -- is the youngest of the Lat brothers and the up-and-coming force at SAINT Studio. Already delivering fresh fades and razor-sharp line ups, Gabriel brings a rare mix of vision and craft to every cut, proving talent runs in the family.",
+    aboutHeading: "The youngest of the brothers, known around the studio as \"The Process\" -- the next chapter of SAINT Studio in the making.",
     about: [
-      "Gabriel brings an editorial eye to grooming, using detail and proportion to make each cut feel complete.",
-      "His approach pairs beard work, clean lines, and a composed finish for clients who want the full look handled.",
+      "Fresh fades, sharp line ups, and a growing signature of his own. Gabriel blends vision with technique, bringing a young, hungry energy to every cut he takes on.",
+      "Expect clean work, good energy, and the kind of chair that reminds you why the next generation matters. Book Gabriel when you want a fresh cut from a rising name.",
     ],
     gallery: [
       { type: "image", src: "assets/images/barber-tools.webp", alt: "Tools prepared for a barber service", caption: "Beard detail, clean line" },
@@ -309,32 +309,18 @@ function setupCarousel(rootElement) {
 document.querySelectorAll("[data-carousel]").forEach(setupCarousel);
 
 function setupHorizontalScroll(scroller) {
-  let target = scroller.scrollLeft;
-  let rafId = null;
-  const ease = 0.18;
   const speed = 1.1;
   const prev = scroller.parentElement.querySelector("[data-scroll-prev]");
   const next = scroller.parentElement.querySelector("[data-scroll-next]");
-
-  const animate = () => {
-    const max = scroller.scrollWidth - scroller.clientWidth;
-    target = Math.max(0, Math.min(max, target));
-    const current = scroller.scrollLeft;
-    const diff = target - current;
-    if (Math.abs(diff) < 0.5) {
-      scroller.scrollLeft = target;
-      rafId = null;
-      return;
-    }
-    scroller.scrollLeft = current + diff * ease;
-    rafId = requestAnimationFrame(animate);
-  };
+  const edgeTolerance = 1;
 
   const scrollByPage = (direction) => {
     const firstItem = scroller.firstElementChild;
     const itemWidth = firstItem ? firstItem.getBoundingClientRect().width : scroller.clientWidth * 0.8;
-    target = scroller.scrollLeft + direction * Math.max(260, itemWidth + 32);
-    if (rafId === null) rafId = requestAnimationFrame(animate);
+    scroller.scrollBy({
+      left: direction * Math.max(260, itemWidth + 32),
+      behavior: "smooth",
+    });
   };
 
   if (prev) prev.addEventListener("click", () => scrollByPage(-1));
@@ -346,19 +332,18 @@ function setupHorizontalScroll(scroller) {
       if (Math.abs(event.deltaY) <= Math.abs(event.deltaX)) return;
       const max = scroller.scrollWidth - scroller.clientWidth;
       if (max <= 0) return;
-      const atStart = target <= 0 && event.deltaY < 0;
-      const atEnd = target >= max && event.deltaY > 0;
+      const current = scroller.scrollLeft;
+      const atStart = current <= edgeTolerance && event.deltaY < 0;
+      const atEnd = current >= max - edgeTolerance && event.deltaY > 0;
       if (atStart || atEnd) return;
+
       event.preventDefault();
-      target = Math.max(0, Math.min(max, target + event.deltaY * speed));
-      if (rafId === null) rafId = requestAnimationFrame(animate);
+
+      const nextLeft = Math.max(0, Math.min(max, current + event.deltaY * speed));
+      scroller.scrollLeft = nextLeft;
     },
     { passive: false }
   );
-
-  scroller.addEventListener("scroll", () => {
-    if (rafId === null) target = scroller.scrollLeft;
-  });
 }
 
 document.querySelectorAll(".barber-feature-scroll, [data-horizontal-scroll]").forEach(setupHorizontalScroll);

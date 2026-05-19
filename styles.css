@@ -1166,6 +1166,24 @@ textarea {
   pointer-events: none;
 }
 
+.creative-feature {
+  border: 0;
+  padding: 0;
+  background: transparent;
+  color: inherit;
+  text-align: left;
+}
+
+button.creative-feature {
+  cursor: pointer;
+}
+
+.barber-feature-caption {
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: 1.25;
+}
+
 .barber-story-section {
   padding-bottom: clamp(36px, 4vw, 56px);
   border-bottom: 1px solid var(--line);
