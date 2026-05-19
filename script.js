@@ -1,30 +1,7 @@
 const root = document.documentElement;
 const body = document.body;
-const themeToggle = document.querySelector("[data-theme-toggle]");
 const menuToggle = document.querySelector("[data-menu-toggle]");
 const mobilePanel = document.querySelector("[data-mobile-panel]");
-const currentTheme = localStorage.getItem("saint-theme");
-
-if (currentTheme) {
-  root.dataset.theme = currentTheme;
-}
-
-function setTheme(theme) {
-  root.dataset.theme = theme;
-  localStorage.setItem("saint-theme", theme);
-  if (themeToggle) {
-    const label = theme === "dark" ? "Light" : "Dark";
-    themeToggle.querySelector("span").textContent = label;
-    themeToggle.setAttribute("aria-label", `Switch to ${label.toLowerCase()} mode`);
-  }
-}
-
-if (themeToggle) {
-  setTheme(root.dataset.theme || "light");
-  themeToggle.addEventListener("click", () => {
-    setTheme(root.dataset.theme === "dark" ? "light" : "dark");
-  });
-}
 
 if (menuToggle && mobilePanel) {
   menuToggle.addEventListener("click", () => {
@@ -195,20 +172,4 @@ if (teamDialog) {
   });
 
   teamDialog.querySelector("[data-close-dialog]").addEventListener("click", () => teamDialog.close());
-}
-
-const filterButtons = [...document.querySelectorAll("[data-filter]")];
-const teamCards = [...document.querySelectorAll("[data-team-card]")];
-
-if (filterButtons.length && teamCards.length) {
-  filterButtons.forEach((button) => {
-    button.addEventListener("click", () => {
-      const filter = button.dataset.filter;
-      filterButtons.forEach((item) => item.classList.toggle("is-active", item === button));
-      teamCards.forEach((card) => {
-        const tags = card.dataset.tags.toLowerCase();
-        card.hidden = filter !== "all" && !tags.includes(filter);
-      });
-    });
-  });
 }

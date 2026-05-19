@@ -4,6 +4,11 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="color-scheme" content="light dark" />
+    <link rel="icon" href="favicon.ico" sizes="any" />
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png" />
+    <link rel="manifest" href="site.webmanifest" />
     <title>Creative Agency — SAINTstudio</title>
     <link rel="stylesheet" href="styles.css" />
   </head>
@@ -24,7 +29,7 @@
           <a href="contact.html">Contact Us</a>
         </nav>
         <a class="brand-wrap" href="index.html" aria-label="SAINTstudio home">
-          <span class="brand"><strong>SAINT</strong><span>studio</span></span>
+          <span class="brand"><strong>SAINT</strong><span>creative</span></span>
         </a>
         <div class="header-actions">
           <a class="icon-link" href="https://www.instagram.com/" aria-label="Instagram">
@@ -34,25 +39,12 @@
               <circle cx="17.4" cy="6.8" r="1" fill="currentColor" stroke="none" />
             </svg>
           </a>
-          <a class="icon-link" href="mailto:hello@saintstudio.ca" aria-label="Email">
+          <a class="icon-link" href="mailto:saintstudiotoronto@gmail.com" aria-label="Email">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
               <path d="M4 6h16v12H4z" />
               <path d="m4 7 8 6 8-6" />
             </svg>
           </a>
-          <a class="icon-link" href="#" aria-label="Cart">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
-              <path d="M3 5h2l2.2 10.4a2 2 0 0 0 2 1.6h7.7a2 2 0 0 0 2-1.5L20 8H7" />
-              <circle cx="10" cy="20" r="1.3" />
-              <circle cx="17" cy="20" r="1.3" />
-            </svg>
-          </a>
-          <button class="icon-button theme-toggle" type="button" data-theme-toggle aria-label="Switch to dark mode">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
-              <path d="M21 12.7A8.8 8.8 0 1 1 11.3 3 7 7 0 0 0 21 12.7Z" />
-            </svg>
-            <span>Dark</span>
-          </button>
         </div>
       </div>
       <div class="mobile-panel" data-mobile-panel>
@@ -86,7 +78,7 @@
             </div>
           </div>
           <figure class="media-card reveal">
-            <img src="assets/images/agency-workspace.webp" alt="Creative workspace with camera gear, laptop, and contact sheets" loading="lazy" />
+            <img src="assets/images/creative-agency-pic.jpg" alt="Creative agency work in progress" loading="lazy" />
           </figure>
         </div>
       </section>
@@ -115,7 +107,7 @@
       <section class="section">
         <div class="container portfolio-shell reveal" data-carousel>
           <div class="section-topline">
-            <h2 class="section-heading">Selected Work</h2>
+            <h2 class="section-heading">Gallery</h2>
             <div class="carousel-controls">
               <button class="carousel-button" type="button" aria-label="Previous portfolio item" data-prev>
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
@@ -140,21 +132,16 @@
                 data-caption="Skincare product photography"
                 data-alt="Skincare products arranged for a studio campaign"
               >
-                <img src="assets/images/agency-skincare.webp" alt="Skincare products arranged for a studio campaign" loading="lazy" />
+                <img src="assets/images/product-photography.jpg" alt="Skincare products arranged for a studio campaign" loading="lazy" />
                 <span>Product Photography</span>
               </button>
-              <button
+              <article
                 class="portfolio-card"
-                type="button"
                 data-slide
-                data-lightbox-trigger
-                data-image="assets/images/agency-fashion.webp"
-                data-caption="Fashion reel thumbnail"
-                data-alt="Fashion model filmed under studio lighting"
               >
-                <img src="assets/images/agency-fashion.webp" alt="Fashion model filmed under studio lighting" loading="lazy" />
+                <video src="assets/images/saint-reel.mp4" autoplay muted loop playsinline preload="metadata"></video>
                 <span>Reels</span>
-              </button>
+              </article>
               <button
                 class="portfolio-card"
                 type="button"
@@ -164,33 +151,17 @@
                 data-caption="Packaging campaign still life"
                 data-alt="Beverage cans styled for a packaging campaign"
               >
-                <img src="assets/images/agency-beverage.webp" alt="Beverage cans styled for a packaging campaign" loading="lazy" />
+                <img src="assets/images/campaigns.jpg" alt="Beverage cans styled for a packaging campaign" loading="lazy" />
                 <span>Campaigns</span>
               </button>
-              <button
+
+              <article
                 class="portfolio-card"
-                type="button"
                 data-slide
-                data-lightbox-trigger
-                data-image="assets/images/agency-flatlay.webp"
-                data-caption="Editorial flat lay"
-                data-alt="Beauty products arranged in an editorial flat lay"
               >
-                <img src="assets/images/agency-flatlay.webp" alt="Beauty products arranged in an editorial flat lay" loading="lazy" />
-                <span>Art Direction</span>
-              </button>
-              <button
-                class="portfolio-card"
-                type="button"
-                data-slide
-                data-lightbox-trigger
-                data-image="assets/images/agency-monitor.webp"
-                data-caption="Social ad creative review"
-                data-alt="Creative review on a monitor beside camera gear"
-              >
-                <img src="assets/images/agency-monitor.webp" alt="Creative review on a monitor beside camera gear" loading="lazy" />
+                <video src="assets/images/ad-creative.mp4" autoplay muted loop playsinline preload="metadata"></video>
                 <span>Ad Creative</span>
-              </button>
+              </article>
             </div>
           </div>
         </div>
@@ -201,19 +172,37 @@
           <h2 class="section-heading reveal">Case Studies</h2>
           <div class="case-study-grid">
             <article class="case-study reveal">
-              <img src="assets/images/agency-flatlay.webp" alt="Minimal beauty product flat lay" loading="lazy" />
+              <img src="assets/images/totelyfineco.jpg" alt="Minimal beauty product flat lay" loading="lazy" />
               <div class="case-study-copy">
                 <h3>Totelyfine.co</h3>
                 <p>Identity, packaging, and product photography for a skincare line built around quiet confidence and repeatable visual rules.</p>
-                <a class="ghost-button" href="https://www.instagram.com/totelyfineco/">View Profile</a>
+                <div class="case-study-actions">
+                  <a class="ghost-button" href="https://totelyfineco.com/">View Profile</a>
+                  <a class="icon-link" href="https://www.instagram.com/totelyfineco/" aria-label="Totelyfine.co on Instagram">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                      <rect x="3" y="3" width="18" height="18" rx="5" />
+                      <circle cx="12" cy="12" r="4.2" />
+                      <circle cx="17.4" cy="6.8" r="1" fill="currentColor" stroke="none" />
+                    </svg>
+                  </a>
+                </div>
               </div>
             </article>
             <article class="case-study reveal">
-              <img src="assets/images/agency-fashion.webp" alt="Fashion reel scene in a studio" loading="lazy" />
+              <img src="assets/images/blnkpile.jpg" alt="Fashion reel scene in a studio" loading="lazy" />
               <div class="case-study-copy">
-                <h3>blnk.pile</h3>
+                <h3>Blank Pile</h3>
                 <p>Campaign content, social video, and launch creative designed to make a seasonal collection feel unmistakably coherent.</p>
-                <a class="ghost-button" href="https://www.instagram.com/blnk.pile/">View Profile</a>
+                <div class="case-study-actions">
+                  <a class="ghost-button" href="https://www.blankpile.com/">View Profile</a>
+                  <a class="icon-link" href="https://www.instagram.com/blnk.pile/" aria-label="Blank Pile on Instagram">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                      <rect x="3" y="3" width="18" height="18" rx="5" />
+                      <circle cx="12" cy="12" r="4.2" />
+                      <circle cx="17.4" cy="6.8" r="1" fill="currentColor" stroke="none" />
+                    </svg>
+                  </a>
+                </div>
               </div>
             </article>
           </div>
