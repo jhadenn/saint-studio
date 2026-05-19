@@ -2,17 +2,38 @@
 
 A static website built with plain HTML, CSS, and JavaScript.
 
+## Setup
+
+This project includes Vercel Web Analytics. To set up the project:
+
+```bash
+npm install
+npm run build
+```
+
 ## Run locally
 
-There is no install or build step required.
+### Option 1: Run with build (recommended)
 
-### Option 1: Open directly
+```bash
+npm install
+npm run build
+npm run dev
+```
+
+Then open:
+
+```text
+http://localhost:8000
+```
+
+### Option 2: Open directly
 
 Open `index.html` in your browser.
 
-### Option 2: Run a local server
+Note: Analytics will not work in this mode as it requires the bundled analytics script.
 
-This is the recommended option if you want the site to behave more like it will after deployment.
+### Option 3: Run a local server
 
 From the project folder, run:
 

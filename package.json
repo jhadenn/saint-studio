@@ -1,0 +1,20 @@
+{
+  "name": "saint-studio",
+  "version": "1.0.0",
+  "description": "A static website built with plain HTML, CSS, and JavaScript.",
+  "type": "module",
+  "scripts": {
+    "dev": "python -m http.server 8000",
+    "build": "npm run build:analytics",
+    "build:analytics": "esbuild analytics.js --bundle --format=esm --outfile=analytics.bundle.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@vercel/analytics": "^2.0.1"
+  },
+  "devDependencies": {
+    "esbuild": "^0.28.0"
+  }
+}
