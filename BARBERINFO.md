@@ -9,6 +9,7 @@ Expect a sharp finish, steady hands, and a chair you can trust every time. Book 
 One of the two owners of SAINT Studio, building the brand alongside his brother. A young creative with skill to match his vision, he's mastered both the craft of cutting hair and the art of creating content — bringing a rare blend of precision and creativity to everything he touches.
 
 Co-owner of SAINT Studio, barber, and creative — building the brand from the chair up alongside his brother.
+
 Skill meets vision. Miguel's cuts are sharp, intentional, and detail-driven, shaped by the same creative eye he brings to his work behind the camera.
 Expect a clean chair, a sharp finish, and the perspective of a barber who sees every cut as part of something bigger. Book Miguel when you want craft and creativity in the same seat.
 

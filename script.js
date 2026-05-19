@@ -17,9 +17,10 @@ const barberProfiles = [
     first: "Joshua",
     last: "Lat",
     name: "Joshua Lat",
-    role: "Co-owner / Master Barber",
+    role: "Co-owner",
     portrait: "assets/images/Joshua-Lat.webp",
     instagram: "https://www.instagram.com/",
+    bookingUrl: "https://getsquire.com/booking/book/saint-studio-toronto/barber/jolo-lat/services",
     description: "The other half of SAINT Studio, co-owning the brand alongside his brother. With 8+ years behind the chair, he's a master of both fades and scissor work -- the kind of barber you can always count on to leave you feeling fresh.",
     aboutHeading: "Co-owner of SAINT Studio, master barber, and 8+ years deep in the craft.",
     about: [
@@ -37,9 +38,10 @@ const barberProfiles = [
     first: "Miguel",
     last: "Lat",
     name: "Miguel Lat",
-    role: "Barber",
+    role: "Co-owner",
     portrait: "assets/images/Miguel-Lat.webp",
     instagram: "https://www.instagram.com/",
+    bookingUrl: "https://getsquire.com/booking/book/saint-studio-toronto/barber/migi-lat/services",
     description: "One of the two owners of SAINT Studio, building the brand alongside his brother. A young creative with skill to match his vision, he's mastered both the craft of cutting hair and the art of creating content -- bringing a rare blend of precision and creativity to everything he touches.",
     aboutHeading: "Co-owner of SAINT Studio, barber, and creative -- building the brand from the chair up alongside his brother.",
     about: [
@@ -57,9 +59,10 @@ const barberProfiles = [
     first: "Luis",
     last: "Nunag",
     name: "Luis Nunag",
-    role: "Barber",
+    role: "Member",
     portrait: "assets/images/Luis-Nunag.webp",
     instagram: "https://www.instagram.com/",
+    bookingUrl: "https://getsquire.com/booking/book/saint-studio-toronto/barber/luis-nunag/services",
     description: "A true veteran of the craft and the core of SAINT Studio. Always locked in, always consistent -- Luis is a master at fades, scissors, and the kind of conversations that make the chair feel like home.",
     aboutHeading: "Veteran barber, steady presence, and the core of SAINT Studio.",
     about: [
@@ -77,9 +80,10 @@ const barberProfiles = [
     first: "Ash",
     last: "Nadeem",
     name: "Ash Nadeem",
-    role: "Barber",
+    role: "Member",
     portrait: "assets/images/Ash-Nadeem.webp",
     instagram: "https://www.instagram.com/",
+    bookingUrl: "https://getsquire.com/booking/book/saint-studio-toronto/barber/ash-nadeem/services",
     description: "A curated look at Ash's craft -- sharp scissor work, seamless fades, and the small details that set every cut apart.",
     aboutHeading: "Precision barber, scissor specialist, and one of the sharpest hands at SAINT Studio.",
     about: [
@@ -97,9 +101,10 @@ const barberProfiles = [
     first: "JP",
     last: "Dela Cruz",
     name: "JP Dela Cruz",
-    role: "Barber",
+    role: "Member",
     portrait: "assets/images/JP-Dela.webp",
     instagram: "https://www.instagram.com/",
+    bookingUrl: "https://getsquire.com/booking/book/saint-studio-toronto/barber/jp-dela-cruz-1/services",
     description: "A creative barber with over 10 years behind the chair. Known for his eye for style and his easygoing energy, JP brings both craft and character to every cut -- making the experience as memorable as the finish.",
     aboutHeading: "Creative barber, 10+ years in the game, and one of the most welcoming chairs at SAINT Studio.",
     about: [
@@ -117,9 +122,10 @@ const barberProfiles = [
     first: "Justin",
     last: "Estrella",
     name: "Justin Estrella",
-    role: "Barber",
+    role: "Member",
     portrait: "assets/images/Justin-Estrella.webp",
     instagram: "https://www.instagram.com/",
+    bookingUrl: "https://getsquire.com/booking/book/saint-studio-toronto/barber/justin-estrella-1/services",
     description: "A young, ambitious barber with serious talent and speed to match. Quick hands, sharp eye, and a drive to keep leveling up -- every cut reflects the hunger behind it.",
     aboutHeading: "Young, talented, and one of the fastest-rising barbers at SAINT Studio.",
     about: [
@@ -137,9 +143,10 @@ const barberProfiles = [
     first: "Gabriel",
     last: "Lat",
     name: "Gabriel Lat",
-    role: "Barber",
+    role: "Member",
     portrait: "assets/images/Gabriel-Lat.webp",
     instagram: "https://www.instagram.com/",
+    bookingUrl: "https://getsquire.com/booking/book/saint-studio-toronto/barber/gabe-lat/services",
     description: "\"The Process\" -- is the youngest of the Lat brothers and the up-and-coming force at SAINT Studio. Already delivering fresh fades and razor-sharp line ups, Gabriel brings a rare mix of vision and craft to every cut, proving talent runs in the family.",
     aboutHeading: "The youngest of the brothers, known around the studio as \"The Process\" -- the next chapter of SAINT Studio in the making.",
     about: [
@@ -168,6 +175,7 @@ function renderBarberProfile() {
   document.title = `${profile.name} | SAINTstudio`;
   const profileName = profilePage.querySelector("[data-profile-name]");
   profileName.textContent = "";
+  profileName.classList.toggle("profile-name--long", profile.name.trim().split(/\s+/).length > 2);
   [profile.first, profile.last].forEach((namePart) => {
     const line = document.createElement("span");
     line.textContent = namePart;
@@ -183,6 +191,7 @@ function renderBarberProfile() {
 
   const bookButton = profilePage.querySelector("[data-profile-book]");
   bookButton.textContent = `Book ${profile.first}`;
+  bookButton.href = profile.bookingUrl;
 
   const instagramButton = profilePage.querySelector("[data-profile-instagram]");
   instagramButton.href = profile.instagram;
@@ -240,6 +249,34 @@ function renderBarberProfile() {
 }
 
 renderBarberProfile();
+
+function isExternalLink(link) {
+  const href = link.getAttribute("href");
+  if (!href || href.startsWith("#")) return false;
+
+  return /^(https?:|mailto:|tel:)/i.test(href);
+}
+
+function openExternalLinksInNewTabs() {
+  document.querySelectorAll("a[href]").forEach((link) => {
+    if (!isExternalLink(link)) return;
+
+    link.target = "_blank";
+    link.rel = "noopener noreferrer";
+  });
+}
+
+openExternalLinksInNewTabs();
+
+document.addEventListener("click", (event) => {
+  if (!(event.target instanceof Element)) return;
+
+  const link = event.target.closest("a[href]");
+  if (!link || !isExternalLink(link)) return;
+
+  link.target = "_blank";
+  link.rel = "noopener noreferrer";
+});
 
 const revealObserver = new IntersectionObserver(
   (entries) => {
@@ -405,8 +442,64 @@ if (visitSection) {
   const entries = [...visitSection.querySelectorAll("[data-visit-entry]")];
   const panels = [...visitSection.querySelectorAll("[data-visit-panel]")];
   const currentEntry = visitSection.querySelector("[data-current-visit-entry]");
+  const visitPane = visitSection.querySelector(".visit-section__pane");
+  const visitPaneParent = visitPane ? visitPane.parentElement : null;
+  const visitPaneNextSibling = visitPane ? visitPane.nextElementSibling : null;
+  const mobileVisitQuery = window.matchMedia("(max-width: 680px)");
+
+  function placeVisitPane() {
+    if (!visitPane || !visitPaneParent) return;
+
+    let activeEntry = entries.find((item) => item.classList.contains("is-active"));
+
+    if (!mobileVisitQuery.matches && !activeEntry) {
+      activeEntry = entries[0];
+      activeEntry.classList.add("is-active");
+      activeEntry.setAttribute("aria-selected", "true");
+      activeEntry.tabIndex = 0;
+      panels.forEach((panel) => {
+        const isActive = panel.dataset.visitPanel === activeEntry.dataset.visitEntry;
+        panel.classList.toggle("is-active", isActive);
+        panel.hidden = !isActive;
+      });
+      if (currentEntry) currentEntry.textContent = activeEntry.dataset.visitEntry;
+    }
+
+    const isOpen = Boolean(activeEntry);
+    visitPane.hidden = mobileVisitQuery.matches && !isOpen;
+    visitPane.classList.toggle("is-address-active", isOpen && activeEntry.dataset.visitEntry === "01");
+
+    if (mobileVisitQuery.matches) {
+      if (!activeEntry) return;
+      activeEntry.after(visitPane);
+      return;
+    }
+
+    visitPaneParent.insertBefore(visitPane, visitPaneNextSibling);
+  }
+
+  function collapseVisitEntries(entry) {
+    entries.forEach((item) => {
+      item.classList.remove("is-active");
+      item.setAttribute("aria-selected", "false");
+      item.tabIndex = item === entry ? 0 : -1;
+    });
+
+    panels.forEach((panel) => {
+      panel.classList.remove("is-active");
+      panel.hidden = true;
+    });
+
+    if (currentEntry) currentEntry.textContent = "--";
+    placeVisitPane();
+  }
 
   function selectVisitEntry(entry) {
+    if (mobileVisitQuery.matches && entry.classList.contains("is-active")) {
+      collapseVisitEntries(entry);
+      return;
+    }
+
     const id = entry.dataset.visitEntry;
 
     entries.forEach((item) => {
@@ -423,6 +516,7 @@ if (visitSection) {
     });
 
     if (currentEntry) currentEntry.textContent = id;
+    placeVisitPane();
   }
 
   entries.forEach((entry, index) => {
@@ -444,6 +538,14 @@ if (visitSection) {
       selectVisitEntry(entries[nextIndex]);
     });
   });
+
+  placeVisitPane();
+
+  if (typeof mobileVisitQuery.addEventListener === "function") {
+    mobileVisitQuery.addEventListener("change", placeVisitPane);
+  } else {
+    mobileVisitQuery.addListener(placeVisitPane);
+  }
 
   const hoursGrid = visitSection.querySelector("[data-visit-hours-grid]");
 
