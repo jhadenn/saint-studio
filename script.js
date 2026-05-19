@@ -11,6 +11,236 @@ if (menuToggle && mobilePanel) {
   });
 }
 
+const barberProfiles = [
+  {
+    slug: "joshua-lat",
+    first: "Joshua",
+    last: "Lat",
+    name: "Joshua Lat",
+    role: "Co-owner / Master Barber",
+    portrait: "assets/images/Joshua-Lat.webp",
+    instagram: "https://www.instagram.com/",
+    description: "Clean structure, steady detail, and a finish that feels considered from every angle.",
+    aboutHeading: "Fades, scissors, and everything in between.",
+    about: [
+      "Fades, scissors, and everything in between. Joshua's work is built on experience and precision, delivering clean, tailored cuts shaped by nearly a decade behind the chair.",
+      "Expect a sharp finish, steady hands, and a chair you can trust every time. Book Joshua when you want to walk out feeling fresh, every visit.",
+    ],
+    gallery: [
+      { type: "image", src: "assets/images/gallery-fade.webp", alt: "Textured fade haircut detail", caption: "Mid fade, textured top" },
+      { type: "video", src: "assets/images/migi-cut.mp4", alt: "Clipper work during a haircut", caption: "Modern mullet, scissor finish" },
+      { type: "image", src: "assets/images/gallery-cut.webp", alt: "Finished cut in the barbershop", caption: "Classic shape, clean taper" },
+    ],
+  },
+  {
+    slug: "miguel-lat",
+    first: "Miguel",
+    last: "Lat",
+    name: "Miguel Lat",
+    role: "Barber",
+    portrait: "assets/images/Miguel-Lat.webp",
+    instagram: "https://www.instagram.com/",
+    description: "Crisp transitions, disciplined beard work, and cuts designed to grow out clean.",
+    aboutHeading: "Crisp transitions shaped to last beyond the appointment.",
+    about: [
+      "Miguel is known for sharp fades, patient detailing, and practical shapes that hold their line after the appointment.",
+      "His chair is a strong fit for clients who want consistency, clean edges, and a finish that feels polished without being overworked.",
+    ],
+    gallery: [
+      { type: "video", src: "assets/images/migi-cut.mp4", alt: "Haircut in progress with clippers", caption: "Low taper, clean blend" },
+      { type: "image", src: "assets/images/gallery-fade.webp", alt: "Fade haircut close-up", caption: "Skin fade, soft texture" },
+      { type: "image", src: "assets/images/barber-tools.webp", alt: "Barber tools on a workstation", caption: "Detail work, lined finish" },
+    ],
+  },
+  {
+    slug: "luis-nunag",
+    first: "Luis",
+    last: "Nunag",
+    name: "Luis Nunag",
+    role: "Barber",
+    portrait: "assets/images/Luis-Nunag.webp",
+    instagram: "https://www.instagram.com/",
+    description: "Measured shape, balanced texture, and a softer approach to polished everyday hair.",
+    aboutHeading: "Measured shape, movement, and soft texture.",
+    about: [
+      "Luis brings a careful eye to proportion, movement, and scissor work, especially for clients who want a cut with shape but no stiffness.",
+      "His work is steady, thoughtful, and focused on building a silhouette that matches the person wearing it.",
+    ],
+    gallery: [
+      { type: "video", src: "assets/images/nunag-cut.mp4", alt: "Finished haircut shown in profile", caption: "Scissor shape, natural flow" },
+      { type: "image", src: "assets/images/gallery-cut.webp", alt: "Modern barbershop haircut detail", caption: "Balanced taper, soft finish" },
+      { type: "image", src: "assets/images/gallery-interior.webp", alt: "Barbershop chair and mirror", caption: "Chair-ready detail" },
+    ],
+  },
+  {
+    slug: "ash-nadeem",
+    first: "Ash",
+    last: "Nadeem",
+    name: "Ash Nadeem",
+    role: "Barber",
+    portrait: "assets/images/Ash-Nadeem.webp",
+    instagram: "https://www.instagram.com/",
+    description: "Strong proportions, beard architecture, and finishes that read clean in person and on camera.",
+    aboutHeading: "Strong proportions from every angle.",
+    about: [
+      "Ash focuses on balance from every angle, pairing careful fade work with beard shaping that frames the face without feeling forced.",
+      "Book Ash for a composed, deliberate cut with sharp detail and a calm chair experience.",
+    ],
+    gallery: [
+      { type: "image", src: "assets/images/gallery-fade.webp", alt: "Detailed fade haircut", caption: "Sharp fade, beard balance" },
+      { type: "image", src: "assets/images/barber-tools.webp", alt: "Barber tools arranged neatly", caption: "Line work and finish" },
+      { type: "image", src: "assets/images/clippers.png", alt: "Clipper tools on a surface", caption: "Precision setup" },
+    ],
+  },
+  {
+    slug: "jp-dela-cruz",
+    first: "JP",
+    last: "Dela Cruz",
+    name: "JP Dela Cruz",
+    role: "Barber",
+    portrait: "assets/images/JP-Dela.webp",
+    instagram: "https://www.instagram.com/",
+    description: "Editorial detail, wearable shape, and a visual eye that connects barbering with image-making.",
+    aboutHeading: "Editorial detail made wearable.",
+    about: [
+      "JP bridges barbering and creative direction, thinking about silhouette, texture, and how a cut lands in the full look.",
+      "His work suits clients who want a cut that feels intentional, styled, and quietly distinctive.",
+    ],
+    gallery: [
+      { type: "image", src: "assets/images/gallery-cut.webp", alt: "Finished barbershop cut", caption: "Editorial shape, clean finish" },
+      { type: "image", src: "assets/images/product-photography.jpg", alt: "Studio product photography setup", caption: "Visual direction" },
+      { type: "image", src: "assets/images/gallery-interior.webp", alt: "Minimal barbershop interior", caption: "Studio polish" },
+    ],
+  },
+  {
+    slug: "justin-estrella",
+    first: "Justin",
+    last: "Estrella",
+    name: "Justin Estrella",
+    role: "Barber",
+    portrait: "assets/images/Justin-Estrella.webp",
+    instagram: "https://www.instagram.com/",
+    description: "Quiet precision, clean shape, and wearable cuts with enough detail to carry personality.",
+    aboutHeading: "Quiet precision for everyday shape.",
+    about: [
+      "Justin works with a focused, practical eye, building cuts that are easy to wear and still feel considered.",
+      "Expect clean transitions, balanced texture, and a finish that keeps the client's day-to-day routine in mind.",
+    ],
+    gallery: [
+      { type: "image", src: "assets/images/gallery-fade.webp", alt: "Clean fade haircut detail", caption: "Wearable fade, soft top" },
+      { type: "video", src: "assets/images/nunag-cut.mp4", alt: "Haircut detail shown in profile", caption: "Textured finish" },
+      { type: "image", src: "assets/images/gallery-cut.webp", alt: "Finished haircut in the studio", caption: "Balanced everyday shape" },
+    ],
+  },
+  {
+    slug: "gabriel-lat",
+    first: "Gabriel",
+    last: "Lat",
+    name: "Gabriel Lat",
+    role: "Barber",
+    portrait: "assets/images/Gabriel-Lat.webp",
+    instagram: "https://www.instagram.com/",
+    description: "Polished grooming, sharp beard work, and a strong sense of overall presentation.",
+    aboutHeading: "Polished grooming with a complete finish.",
+    about: [
+      "Gabriel brings an editorial eye to grooming, using detail and proportion to make each cut feel complete.",
+      "His approach pairs beard work, clean lines, and a composed finish for clients who want the full look handled.",
+    ],
+    gallery: [
+      { type: "image", src: "assets/images/barber-tools.webp", alt: "Tools prepared for a barber service", caption: "Beard detail, clean line" },
+      { type: "image", src: "assets/images/gallery-fade.webp", alt: "Fade haircut close-up", caption: "Polished transition" },
+      { type: "image", src: "assets/images/gallery-cut.webp", alt: "Finished haircut detail", caption: "Complete finish" },
+    ],
+  },
+];
+
+function renderBarberProfile() {
+  const profilePage = document.querySelector("[data-barber-profile]");
+  if (!profilePage) return;
+
+  const params = new URLSearchParams(window.location.search);
+  const slug = params.get("barber") || barberProfiles[0].slug;
+  const profileIndex = Math.max(0, barberProfiles.findIndex((item) => item.slug === slug));
+  const profile = barberProfiles[profileIndex];
+  const previous = barberProfiles[(profileIndex - 1 + barberProfiles.length) % barberProfiles.length];
+  const next = barberProfiles[(profileIndex + 1) % barberProfiles.length];
+
+  document.title = `${profile.name} | SAINTstudio`;
+  const profileName = profilePage.querySelector("[data-profile-name]");
+  profileName.textContent = "";
+  [profile.first, profile.last].forEach((namePart) => {
+    const line = document.createElement("span");
+    line.textContent = namePart;
+    profileName.append(line);
+  });
+  profilePage.querySelector("[data-profile-role]").textContent = profile.role;
+  profilePage.querySelector("[data-profile-description]").textContent = profile.description;
+  profilePage.querySelector("[data-profile-about-heading]").textContent = profile.aboutHeading;
+
+  const portrait = profilePage.querySelector("[data-profile-portrait]");
+  portrait.src = profile.portrait;
+  portrait.alt = `Portrait of ${profile.name}`;
+
+  const bookButton = profilePage.querySelector("[data-profile-book]");
+  bookButton.textContent = `Book ${profile.first}`;
+
+  const instagramButton = profilePage.querySelector("[data-profile-instagram]");
+  instagramButton.href = profile.instagram;
+
+  const about = profilePage.querySelector("[data-profile-about]");
+  about.textContent = "";
+  profile.about.forEach((copy) => {
+    const paragraph = document.createElement("p");
+    paragraph.textContent = copy;
+    about.append(paragraph);
+  });
+
+  const gallery = profilePage.querySelector("[data-barber-gallery]");
+  gallery.textContent = "";
+  profile.gallery.forEach((item, index) => {
+    const article = document.createElement("article");
+    article.className = "barber-feature reveal";
+
+    const number = document.createElement("div");
+    number.className = "barber-feature-meta";
+    const numberText = document.createElement("span");
+    numberText.textContent = String(index + 1).padStart(2, "0");
+    number.append(numberText);
+
+    const figure = document.createElement("figure");
+
+    if (item.type === "video") {
+      const video = document.createElement("video");
+      video.src = item.src;
+      video.autoplay = true;
+      video.muted = true;
+      video.loop = true;
+      video.playsInline = true;
+      video.preload = "metadata";
+      video.setAttribute("aria-label", item.alt);
+      figure.append(video);
+    } else {
+      const image = document.createElement("img");
+      image.src = item.src;
+      image.alt = item.alt;
+      image.loading = "lazy";
+      figure.append(image);
+    }
+
+    article.append(number, figure);
+    gallery.append(article);
+  });
+
+  const previousLink = profilePage.querySelector("[data-profile-prev]");
+  const nextLink = profilePage.querySelector("[data-profile-next]");
+  previousLink.href = `barber-profile.html?barber=${previous.slug}`;
+  nextLink.href = `barber-profile.html?barber=${next.slug}`;
+  profilePage.querySelector("[data-profile-prev-name]").textContent = previous.name;
+  profilePage.querySelector("[data-profile-next-name]").textContent = next.name;
+}
+
+renderBarberProfile();
+
 const revealObserver = new IntersectionObserver(
   (entries) => {
     entries.forEach((entry) => {
@@ -78,32 +308,43 @@ function setupCarousel(rootElement) {
 
 document.querySelectorAll("[data-carousel]").forEach(setupCarousel);
 
-const featureScroll = document.querySelector(".barber-feature-scroll");
-if (featureScroll) {
-  let target = featureScroll.scrollLeft;
+function setupHorizontalScroll(scroller) {
+  let target = scroller.scrollLeft;
   let rafId = null;
   const ease = 0.18;
   const speed = 1.1;
+  const prev = scroller.parentElement.querySelector("[data-scroll-prev]");
+  const next = scroller.parentElement.querySelector("[data-scroll-next]");
 
   const animate = () => {
-    const max = featureScroll.scrollWidth - featureScroll.clientWidth;
+    const max = scroller.scrollWidth - scroller.clientWidth;
     target = Math.max(0, Math.min(max, target));
-    const current = featureScroll.scrollLeft;
+    const current = scroller.scrollLeft;
     const diff = target - current;
     if (Math.abs(diff) < 0.5) {
-      featureScroll.scrollLeft = target;
+      scroller.scrollLeft = target;
       rafId = null;
       return;
     }
-    featureScroll.scrollLeft = current + diff * ease;
+    scroller.scrollLeft = current + diff * ease;
     rafId = requestAnimationFrame(animate);
   };
 
-  featureScroll.addEventListener(
+  const scrollByPage = (direction) => {
+    const firstItem = scroller.firstElementChild;
+    const itemWidth = firstItem ? firstItem.getBoundingClientRect().width : scroller.clientWidth * 0.8;
+    target = scroller.scrollLeft + direction * Math.max(260, itemWidth + 32);
+    if (rafId === null) rafId = requestAnimationFrame(animate);
+  };
+
+  if (prev) prev.addEventListener("click", () => scrollByPage(-1));
+  if (next) next.addEventListener("click", () => scrollByPage(1));
+
+  scroller.addEventListener(
     "wheel",
     (event) => {
       if (Math.abs(event.deltaY) <= Math.abs(event.deltaX)) return;
-      const max = featureScroll.scrollWidth - featureScroll.clientWidth;
+      const max = scroller.scrollWidth - scroller.clientWidth;
       if (max <= 0) return;
       const atStart = target <= 0 && event.deltaY < 0;
       const atEnd = target >= max && event.deltaY > 0;
@@ -115,10 +356,12 @@ if (featureScroll) {
     { passive: false }
   );
 
-  featureScroll.addEventListener("scroll", () => {
-    if (rafId === null) target = featureScroll.scrollLeft;
+  scroller.addEventListener("scroll", () => {
+    if (rafId === null) target = scroller.scrollLeft;
   });
 }
+
+document.querySelectorAll(".barber-feature-scroll, [data-horizontal-scroll]").forEach(setupHorizontalScroll);
 
 document.querySelectorAll("[data-demo-form]").forEach((form) => {
   form.addEventListener("submit", (event) => {
@@ -144,34 +387,6 @@ if (lightbox) {
     });
   });
   lightbox.querySelector("[data-close-dialog]").addEventListener("click", () => lightbox.close());
-}
-
-const teamDialog = document.querySelector("[data-team-dialog]");
-if (teamDialog) {
-  const teamImage = teamDialog.querySelector("[data-team-image]");
-  const teamName = teamDialog.querySelector("[data-team-name]");
-  const teamRole = teamDialog.querySelector("[data-team-role]");
-  const teamBio = teamDialog.querySelector("[data-team-bio]");
-  const teamTags = teamDialog.querySelector("[data-team-tags]");
-
-  document.querySelectorAll("[data-team-card]").forEach((card) => {
-    card.addEventListener("click", () => {
-      teamImage.src = card.dataset.image;
-      teamImage.alt = card.dataset.alt;
-      teamName.textContent = card.dataset.name;
-      teamRole.textContent = card.dataset.role;
-      teamBio.textContent = card.dataset.bio;
-      teamTags.innerHTML = "";
-      card.dataset.tags.split(",").forEach((tag) => {
-        const item = document.createElement("span");
-        item.textContent = tag.trim();
-        teamTags.appendChild(item);
-      });
-      teamDialog.showModal();
-    });
-  });
-
-  teamDialog.querySelector("[data-close-dialog]").addEventListener("click", () => teamDialog.close());
 }
 
 const visitSection = document.querySelector(".visit-section");

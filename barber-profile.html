@@ -9,7 +9,7 @@
     <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png" />
     <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png" />
     <link rel="manifest" href="site.webmanifest" />
-    <title>SAINTstudio</title>
+    <title>Barber Profile | SAINTstudio</title>
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
@@ -23,9 +23,9 @@
         </button>
         <nav class="primary-nav" aria-label="Primary">
           <a href="index.html">Home</a>
-          <a href="barbershop.html" aria-current="page">Barbershop</a>
+          <a href="barbershop.html">Barbershop</a>
           <a href="creative-agency.html">Creative Agency</a>
-          <a href="team.html">Our Team</a>
+          <a href="team.html" aria-current="page">Our Team</a>
           <a href="contact.html">Contact Us</a>
         </nav>
         <a class="brand-wrap" href="index.html" aria-label="SAINTstudio home">
@@ -50,92 +50,70 @@
       <div class="mobile-panel" data-mobile-panel>
         <nav class="mobile-nav" aria-label="Mobile">
           <a href="index.html">Home</a>
-          <a href="barbershop.html" aria-current="page">Barbershop</a>
+          <a href="barbershop.html">Barbershop</a>
           <a href="creative-agency.html">Creative Agency</a>
-          <a href="team.html">Our Team</a>
+          <a href="team.html" aria-current="page">Our Team</a>
           <a href="contact.html">Contact Us</a>
         </nav>
       </div>
     </header>
 
-    <main id="main-content" class="barbershop-page">
-      <section class="barber-editorial-hero">
-        <div class="container barber-hero-grid">
-          <div class="barber-hero-copy reveal">
-            <h1>Where Sharp Meets Standard.</h1>
-            <p>Scarborough's home for precision cuts and intentional craft.</p>
+    <main id="main-content" class="barber-profile-page" data-barber-profile>
+      <section class="profile-hero">
+        <div class="container profile-hero-grid">
+          <div class="profile-hero-copy reveal">
+            <h1 class="profile-name" data-profile-name>
+              <span>Joshua</span>
+              <span>Lat</span>
+            </h1>
+            <p class="profile-role" data-profile-role>Co-owner / Master Barber</p>
+            <p class="profile-description" data-profile-description>Clean structure, steady detail, and a finish that feels considered from every angle.</p>
+            <div class="profile-actions">
+              <a class="profile-book-button" data-profile-book href="https://getsquire.com/booking/brands/saint-studio">Book Joshua</a>
+              <a class="profile-instagram-button" data-profile-instagram href="https://www.instagram.com/" target="_blank" rel="noopener">Instagram</a>
+            </div>
           </div>
-          <figure class="barber-hero-image reveal">
-            <img src="assets/images/barbershop.jpg" alt="Minimal monochrome barbershop interior with two chairs" />
+          <figure class="profile-portrait reveal">
+            <img data-profile-portrait src="assets/images/Joshua-Lat.webp" alt="Portrait of Joshua Lat" />
           </figure>
-        </div>
-      </section>
-
-      <section class="section barber-feature-section">
-        <div class="barber-feature-scroll">
-          <article class="barber-feature reveal">
-            <div class="barber-feature-meta"><span>01</span></div>
-            <figure>
-              <img src="assets/images/clippers.png" alt="Barber tools arranged neatly on a workstation" loading="lazy" />
-            </figure>
-          </article>
-
-          <article class="barber-feature reveal">
-            <div class="barber-feature-meta"><span>02</span></div>
-            <figure>
-              <video src="assets/images/migi-cut.mp4" autoplay muted loop playsinline preload="metadata" aria-label="Haircut in progress with clippers and comb"></video>
-            </figure>
-          </article>
-
-          <article class="barber-feature reveal">
-            <div class="barber-feature-meta"><span>03</span></div>
-            <figure>
-              <img src="assets/images/gallery-cut.webp" alt="Modern barbershop interior with chairs and mirrors" loading="lazy" />
-            </figure>
-          </article>
-
-          <article class="barber-feature reveal">
-            <div class="barber-feature-meta"><span>04</span></div>
-            <figure>
-              <video src="assets/images/nunag-cut.mp4" autoplay muted loop playsinline preload="metadata" aria-label="Finished fade haircut shown in profile"></video>
-            </figure>
-          </article>
         </div>
       </section>
 
       <section class="section barber-story-section">
         <div class="container barber-story-grid">
           <div class="barber-story-heading reveal">
-            <p class="eyebrow">Our Story</p>
-            <h2>Scarborough's home for precision cuts and intentional craft.</h2>
+            <p class="eyebrow">About Me</p>
+            <h2 data-profile-about-heading>Fades, scissors, and everything in between.</h2>
           </div>
-          <div class="barber-story-copy reveal">
-            <p>SAINT Studio didn't start as a business plan &mdash; it started as a standard.</p>
-            <p>
-              Built in Scarborough by a young creative who believed the barbershop experience could be more than a quick cut and a goodbye. More intentional. More personal. More consistent. Every detail &mdash; from the atmosphere to the finish on your fade &mdash; was designed with one thing in mind: you leave better than you walked in.
-            </p>
-            <p>
-              The name SAINT isn't about perfection. It's about pursuing it. It's a daily commitment to the craft, to the community, and to showing up with excellence every single time the chair gets filled.
-            </p>
-            <p>
-              This is more than a barbershop. It's a space built on faith, discipline, and pride in the work &mdash; and it shows in every visit.
-            </p>
+          <div class="barber-story-copy reveal" data-profile-about>
+            <p>Fades, scissors, and everything in between. Joshua's work is built on experience and precision, delivering clean, tailored cuts shaped by nearly a decade behind the chair.</p>
+            <p>Expect a sharp finish, steady hands, and a chair you can trust every time. Book Joshua when you want to walk out feeling fresh, every visit.</p>
           </div>
         </div>
       </section>
 
-      <section class="barber-closing-statement">
-        <div class="container reveal">
-          <p>Every cut. Every detail. Every standard.</p>
-          <h2>Live With Purpose.</h2>
-        </div>
+      <section class="section barber-feature-section">
+        <div class="barber-feature-scroll" data-barber-gallery></div>
       </section>
+
+      <nav class="profile-adjacent" aria-label="Barber profiles">
+        <div class="container profile-adjacent-inner">
+          <a class="profile-adjacent-link profile-adjacent-link--prev" data-profile-prev href="barber-profile.html?barber=gabriel-lat">
+            <span>Previous Barber</span>
+            <strong data-profile-prev-name>Gabriel Lat</strong>
+          </a>
+          <a class="profile-adjacent-link profile-adjacent-link--next" data-profile-next href="barber-profile.html?barber=miguel-lat">
+            <span>Next Barber</span>
+            <strong data-profile-next-name>Miguel Lat</strong>
+          </a>
+        </div>
+      </nav>
     </main>
 
     <footer class="site-footer">
       <div class="footer-inner">
         <div class="footer-brand"><strong>SAINT</strong>studio</div>
-        <div class="footer-copy">1154 Morningside Ave · Toronto, Ontario</div>
+        <div class="footer-copy">1154 Morningside Ave &middot; Toronto, Ontario</div>
         <div class="footer-socials">
           <a class="icon-link" href="https://www.instagram.com/saintstudio.to/" aria-label="Instagram">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">

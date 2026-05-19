@@ -1154,10 +1154,16 @@ textarea {
   aspect-ratio: 4 / 5;
 }
 
-.barber-feature img {
+.barber-feature img,
+.barber-feature video {
   width: 100%;
   height: 100%;
   object-fit: cover;
+}
+
+.barber-feature video {
+  display: block;
+  pointer-events: none;
 }
 
 .barber-story-section {
@@ -1417,6 +1423,7 @@ button.portfolio-card {
 }
 
 .team-card {
+  display: block;
   border: 0;
   padding: 0;
   background: transparent;
@@ -1455,6 +1462,158 @@ button.portfolio-card {
   margin: 0;
   color: var(--muted);
   font-size: 0.92rem;
+}
+
+.barber-profile-page {
+  background: var(--bg);
+}
+
+.profile-hero {
+  padding: 76px 0 88px;
+}
+
+.profile-hero-grid {
+  display: grid;
+  grid-template-columns: minmax(280px, 0.95fr) minmax(320px, 0.78fr);
+  gap: 72px;
+  align-items: center;
+}
+
+.profile-hero-copy {
+  display: grid;
+  align-content: center;
+  justify-items: start;
+  gap: 22px;
+}
+
+.profile-name {
+  display: grid;
+  margin: 0;
+  font-size: clamp(3rem, 8vw, 7rem);
+  font-weight: 700;
+  line-height: 0.95;
+  letter-spacing: -0.06em;
+}
+
+.profile-role {
+  margin: 18px 0 0;
+  color: #354052;
+  font-size: 1.08rem;
+}
+
+.profile-description {
+  max-width: 480px;
+  margin: 0;
+  color: var(--muted);
+  font-size: 1rem;
+  line-height: 1.65;
+}
+
+.profile-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  align-items: center;
+}
+
+.profile-book-button,
+.profile-instagram-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 56px;
+  padding: 0 30px;
+  border-radius: var(--radius-pill);
+  font-size: 0.92rem;
+  font-weight: 700;
+  transition:
+    transform 180ms ease,
+    background-color 180ms ease,
+    border-color 180ms ease,
+    color 180ms ease;
+}
+
+.profile-book-button {
+  border: 1px solid var(--text);
+  background: var(--text);
+  color: var(--inverse);
+}
+
+.profile-instagram-button {
+  border: 1px solid var(--line);
+  background: transparent;
+  color: var(--text);
+}
+
+.profile-book-button:hover,
+.profile-book-button:focus-visible,
+.profile-instagram-button:hover,
+.profile-instagram-button:focus-visible {
+  transform: translateY(-2px);
+}
+
+.profile-instagram-button:hover,
+.profile-instagram-button:focus-visible {
+  border-color: var(--text);
+}
+
+.profile-portrait {
+  overflow: hidden;
+  margin: 0;
+  background:
+    repeating-linear-gradient(135deg, rgba(10, 10, 10, 0.035) 0 14px, rgba(255, 255, 255, 0.22) 14px 28px),
+    #edeae2;
+  aspect-ratio: 4 / 5;
+}
+
+.profile-portrait img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+}
+
+.profile-adjacent {
+  border-top: 1px solid var(--line);
+}
+
+.profile-adjacent-inner {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 24px;
+  padding: 32px 0;
+}
+
+.profile-adjacent-link {
+  display: grid;
+  gap: 4px;
+  min-width: 0;
+}
+
+.profile-adjacent-link--next {
+  justify-items: end;
+  text-align: right;
+}
+
+.profile-adjacent-link span {
+  color: var(--muted);
+  font-size: 0.72rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+
+.profile-adjacent-link strong {
+  font-size: clamp(1.45rem, 2.6vw, 2.1rem);
+  font-weight: 700;
+  line-height: 1;
+  letter-spacing: -0.06em;
+}
+
+.profile-adjacent-link:hover strong,
+.profile-adjacent-link:focus-visible strong {
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 5px;
 }
 
 dialog {
@@ -1695,8 +1854,13 @@ dialog::backdrop {
   }
 
   .barber-hero-grid,
-  .barber-story-grid {
+  .barber-story-grid,
+  .profile-hero-grid {
     grid-template-columns: 1fr;
+  }
+
+  .profile-hero-grid {
+    gap: 40px;
   }
 
   .barber-hero-copy {
@@ -1798,6 +1962,14 @@ dialog::backdrop {
 
   .visit-reach {
     grid-template-columns: 1fr;
+  }
+
+  .profile-name {
+    font-size: 5.5rem;
+  }
+
+  .profile-portrait {
+    max-width: 560px;
   }
 }
 
@@ -1942,6 +2114,27 @@ dialog::backdrop {
   }
 
   .barber-closing-statement {
+    text-align: left;
+  }
+
+  .profile-hero {
+    padding: 48px 0 58px;
+  }
+
+  .profile-name {
+    font-size: 3.85rem;
+  }
+
+  .profile-role {
+    margin-top: 6px;
+  }
+
+  .profile-adjacent-inner {
+    grid-template-columns: 1fr;
+  }
+
+  .profile-adjacent-link--next {
+    justify-items: start;
     text-align: left;
   }
 }
