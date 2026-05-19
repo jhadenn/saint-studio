@@ -2135,7 +2135,7 @@ dialog::backdrop {
   }
 
   .hero-model {
-    width: min(132vw, 680px);
+    width: min(106vw, 680px);
     height: 88svh;
   }
 
